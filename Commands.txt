@@ -7,3 +7,15 @@ kubectl cluster-info
 kubectl expose pod <podName> --port=<portNumber> --type=LoadBalancer
 kubectl delete service <serviceName>
 kubectl get services -w
+kubectl exec <PodName> ./bin/bash
+*** Command inside the container****
+kubectl exec -it <podName> -- ./bin/bash
+**** Command for two containers in a pod *****
+kubectl exec -it <podName> -c <conatinerName> -- ./bin/bash
+===========================================================
+kubectl exec <podName> <command which we need to execute>
+    example
+        kubectl exec nginx-pod env
+kubectl exec <podName> -c <conatinerName> -it <command which we need to execute>
+
+
