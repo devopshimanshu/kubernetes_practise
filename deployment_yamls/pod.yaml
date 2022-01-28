@@ -7,4 +7,4 @@ spec:
     - name: nginx-pod-1
       image: nginx
       ports:
-        - conatinerPort: 80
+        - containerPort: 80
