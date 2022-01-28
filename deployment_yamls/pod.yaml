@@ -15,7 +15,7 @@ spec:
           value: https://github.com/devopshimanshu/kubernetes_practise.git
       ports:
         - containerPort: 80
-    - name: nginx-pod-2
-      image: nginx:1.12
+    - name: tomcat
+      image: tomcat
       ports:
         - containerPort: 8080
