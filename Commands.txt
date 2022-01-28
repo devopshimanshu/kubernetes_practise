@@ -1,0 +1,4 @@
+kubectl apply -f <fileName>
+kubectl describe <podName>
+kubectl logs <podName>
+kubectl cluster-info
