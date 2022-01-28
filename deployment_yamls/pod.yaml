@@ -8,5 +8,10 @@ spec:
   containers:
     - name: nginx-pod-1
       image: nginx
+      env :
+        - name: environment
+          value: prod
+        - name: github_url
+          value: https://github.com/devopshimanshu/kubernetes_practise.git
       ports:
         - containerPort: 80

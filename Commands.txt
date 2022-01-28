@@ -1,4 +1,9 @@
+
 kubectl apply -f <fileName>
+kubectl get pods -o wide
 kubectl describe <podName>
 kubectl logs <podName>
 kubectl cluster-info
+kubectl expose pod <podName> --port=<portNumber> --type=LoadBalancer
+kubectl delete service <serviceName>
+kubectl get services -w
