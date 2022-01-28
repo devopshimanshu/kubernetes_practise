@@ -17,3 +17,5 @@ spec:
         - containerPort: 80
     - name: nginx-pod-2
       image: nginx:1.12
+      ports:
+        - containerPort: 8080
