@@ -1,1 +1,2 @@
-=====> how to enter ina selected container inside a pod if pod have multiple conatiners?
+=> how to enter ina selected container inside a pod if pod have multiple conatiners?
+=> How to run two nginx container inside a pod?

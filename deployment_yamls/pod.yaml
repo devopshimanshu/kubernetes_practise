@@ -15,6 +15,7 @@ spec:
           value: https://github.com/devopshimanshu/kubernetes_practise.git
       ports:
         - containerPort: 80
+      args: [echo : "$environment"]
     - name: tomcat
       image: tomcat
       ports:
