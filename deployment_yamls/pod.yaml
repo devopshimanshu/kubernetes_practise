@@ -13,9 +13,9 @@ spec:
           value: prod
         - name: github_url
           value: https://github.com/devopshimanshu/kubernetes_practise.git
+      args: ["$(environment)"]
       ports:
         - containerPort: 80
-      args: [echo : "$environment"]
     - name: tomcat
       image: tomcat
       ports:
