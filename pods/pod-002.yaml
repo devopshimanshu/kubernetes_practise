@@ -1,0 +1,16 @@
+#adding envronment variables in this pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    environment: prod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.16
+      env:
+        - name: username
+          value: paswword
+      ports:
+        - containerPort: 80

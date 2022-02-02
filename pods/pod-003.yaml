@@ -1,0 +1,23 @@
+#Create two containers in a single pod with environment variable
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webserver-pod
+  labels:
+    environment: prod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      env:
+        - name: container-name
+          value: nginx-container
+      ports:
+        - containerPort: 80
+    - name: tomcat-container
+      image: tomcat
+      env:
+        - name: container-name
+          value: tomcat-container
+      ports:
+        - containerPort: 8080

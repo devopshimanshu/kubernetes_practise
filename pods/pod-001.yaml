@@ -1,0 +1,13 @@
+#Here we are going to create a single pod of nginx 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    environment: prod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.16
+      ports:
+        - containerPort: 80 

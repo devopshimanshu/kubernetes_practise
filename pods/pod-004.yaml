@@ -1,0 +1,28 @@
+#Init-container whcih will run before the normal containers 
+#and as it shutdown other containers will get alive
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webserver-pod
+  labels:
+    environment: prod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      env:
+        - name: container-name
+          value: nginx-container
+      ports:
+        - containerPort: 30963
+    - name: tomcat-container
+      image: tomcat
+      env:
+        - name: container-name
+          value: tomcat-container
+      ports:
+        - containerPort: 8080
+  initContainers:
+    - name: init-myservice
+      image: busybox:1.28
+      command: ['sleep',"60"]
