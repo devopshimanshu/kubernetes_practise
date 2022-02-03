@@ -18,4 +18,4 @@ kubectl exec <podName> <command which we need to execute>
         kubectl exec nginx-pod env
 kubectl exec <podName> -c <conatinerName> -it <command which we need to execute>
 
-
+We need to assign ports in container-port from 30000
