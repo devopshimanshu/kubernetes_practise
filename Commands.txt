@@ -19,3 +19,19 @@ kubectl exec <podName> <command which we need to execute>
 kubectl exec <podName> -c <conatinerName> -it <command which we need to execute>
 
 We need to assign ports in container-port from 30000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ClusterIp:
+Its a kind of service in which if pod is exposed then within the cluster we can access pod with that IP and port But inside the cluster only not outside.
+kubectl expose pod <podName> --port <containerPort> --target-port <clusterPort>
+
+In clusterIp pod port is bind with clusterIp
+
+In NordPort pod port is bind with workerNode Ip 
+NodePort is accessable to outside world 
+it has a security breach we are exposing the pod ports directly to the world 
+to overcome this issue we have LoadBalancer 
+
+For NodePort the port range is 30000 to 32767 port number

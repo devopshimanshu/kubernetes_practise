@@ -17,6 +17,7 @@ kubectl apply -f <podFileName>
 ```bash
 kubectl get pods 
 kubectl get pods -o wide
+kubectl get pods --show-labels
 ```
 ### Get details of the pod
 ```bash
@@ -36,7 +37,7 @@ kubectl exec <podName> <command which we need to execute>
 example
     kubectl exec nginx-pod env
 ```
-### if pod have two or more containers
+### If pod have two or more containers
 ```bash
 kubectl exec -it <podName>  -c <conatinerName> --./bin/bash
 ```
@@ -63,3 +64,21 @@ kubectl get services -w
 ```bash
 kubectl delete services
 ```
+### Add new label to running pod
+```bash
+kubectl label pods <your-pod-name> <labelKey>=<labelValue>
+```
+### Add multiple new label to running pod
+```bash
+kubectl label pods <your-pod-name> {key1=value1,key2=value2,key3=value3}
+```
+### Edit label of the runing pod without stoping it
+```bash
+kubectl label pod <podName> --overwrite <labelKey>=<LabelValue> 
+```
+### Delete label of the runing pod without stoping it
+```bash
+kubectl label pods <your-pod-name> <label-name>- 
+```
+>*end minus(-)sign is important*
+
